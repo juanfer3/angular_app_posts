@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+@import url(https://fonts.googleapis.com/icon?family=Roboto);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+@import url(https://fonts.googleapis.com/css?family=Lekton|Montserrat);
+
+// Titles
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Montserrat', sans-serif;
+}
+
+//Body
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: #f0f0f0;
+  font-family: 'Lekton', sans-serif;
+}
+
+// Buttons
+.mybtn-success{
+  background: #1EB980!important;
+  color: aliceblue;
+}
+
+.mybtn-danger{
+  background: red;
+  color: aliceblue;
+}
+
+.mybtn-warning{
+  background: #FFCF44;
+  color: black;
+}
+
+.mybtn-primary{
+  background: #2196F3;
+  color: black;
+}

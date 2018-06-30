@@ -1,0 +1,64 @@
+<mat-toolbar  class="my_navar">
+  <span>My App</span>
+
+
+
+
+  <span class="spacer"></span>
+  <!--Button Menu-->
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <!--Menu-->
+  <mat-menu #menu="matMenu" class="my_navbar" >
+    
+      <button mat-menu-item >
+        <mat-icon>alarm_off</mat-icon>
+        <span>Logout</span>
+      </button>
+
+      <button mat-menu-item >
+        <mat-icon>redeem</mat-icon>
+        <span>Login</span>
+      </button>
+
+    
+  </mat-menu>
+
+</mat-toolbar>
+
+
+<!-- Navegador -->
+<mat-tab-group  >
+  <!-- Link to Home -->
+  <mat-tab >
+
+    <ng-template mat-tab-label >
+
+      <button mat-button >Inicio</button>
+    </ng-template>
+  </mat-tab>
+  <!-- Link to User-->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <button mat-button  >Artistas</button>
+    </ng-template>
+  </mat-tab>
+  <!-- Link to Login-->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <button mat-button  >Login</button>
+    </ng-template>
+  </mat-tab>
+
+  <!-- Link to Singup-->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <button mat-button  >Singup</button>
+    </ng-template>
+  </mat-tab>
+
+ 
+
+
+</mat-tab-group>
