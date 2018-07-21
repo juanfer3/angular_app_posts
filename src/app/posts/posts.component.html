@@ -1,11 +1,14 @@
-<p>
-  posts works!
-</p>
-
+<div class="example-container">
+  <h3>Create Post</h3>
+</div>
 
 <div >
   <form class="example-container"  #postForm="ngForm" (ngSubmit)="createPost(postForm); postForm.reset()">
-  <mat-form-field>
+ 
+    
+ 
+ 
+    <mat-form-field>
     <input matInput placeholder="Title" name="title" id="title" ngModel>
   </mat-form-field>
 
@@ -27,10 +30,10 @@
         <mat-list-item role="listitem"> 
           <p matLine>{{post.title}}</p>
           <p matLine> {{post.description}} </p>
-          <button  mat-button class="" (click)="btn_show(post.id)" >
+          <button  mat-button class=""  (click)="openModal(post)" >
               <mat-icon>home</mat-icon>
           </button> 
-          <button  mat-button >
+          <button  mat-button routerLink="/posts/{{post.id}}">
               <mat-icon>edit</mat-icon>
           </button> 
           <button  mat-button class="" (click)="btn_delete(post)">

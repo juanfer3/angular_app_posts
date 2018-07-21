@@ -11,20 +11,12 @@
   </button>
   <!--Menu-->
   <mat-menu #menu="matMenu" class="my_navbar" >
-    
-      <button mat-menu-item >
-        <mat-icon>alarm_off</mat-icon>
-        <span>Logout</span>
-      </button>
-
-      <button mat-menu-item >
-        <mat-icon>redeem</mat-icon>
-        <span>Login</span>
-      </button>
-
+        <!-- 
+    <app-auth-links></app-auth-links>
+      -->
     
   </mat-menu>
-
+ 
 </mat-toolbar>
 
 
@@ -35,26 +27,19 @@
 
     <ng-template mat-tab-label >
 
-      <button mat-button >Inicio</button>
+      <button mat-button  routerLink="/" >Home</button>
     </ng-template>
   </mat-tab>
   <!-- Link to User-->
   <mat-tab>
     <ng-template mat-tab-label>
-      <button mat-button  >Artistas</button>
+      <button mat-button  routerLink="posts">Posts</button>
     </ng-template>
   </mat-tab>
-  <!-- Link to Login-->
-  <mat-tab>
+<!-- Account-->
+<mat-tab>
     <ng-template mat-tab-label>
-      <button mat-button  >Login</button>
-    </ng-template>
-  </mat-tab>
-
-  <!-- Link to Singup-->
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <button mat-button  >Singup</button>
+      <button mat-button  routerLink="profile">Profile</button>
     </ng-template>
   </mat-tab>
 

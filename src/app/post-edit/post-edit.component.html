@@ -1,0 +1,26 @@
+<p>
+  post-edit works!
+</p>
+
+
+
+<mat-card class="example-container" >Simple card
+  <mat-card-content >
+    <form  #postForm="ngForm" (ngSubmit)="editPost(postForm)" fxLayout="column2" fxLayoutAlign="space-around center" >
+    <mat-form-field>
+      <input matInput placeholder="Title" class="form_input" [(ngModel)]="post.title" name="title" id="title" ngModel >
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea matInput placeholder="Description" [(ngModel)]="post.description" name="description" id="description" ngModel></textarea>
+    </mat-form-field>
+    <button mat-raised-button class="mybtn-success" type="submit">
+        Guandar
+        <mat-icon>send</mat-icon>
+    </button>
+   </form>
+        
+    
+</mat-card-content>
+
+</mat-card>

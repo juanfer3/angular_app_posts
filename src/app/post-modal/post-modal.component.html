@@ -1,0 +1,30 @@
+<mat-card-header>
+    <mat-toolbar  class="my_navar">
+        <span>{{data.title}} </span>
+      
+      
+      
+      
+        <span class="spacer"></span>
+        <!--Button Menu-->
+        <button mat-icon-button (click)="closeModal()">
+          <mat-icon>close</mat-icon>
+        </button>
+  
+      
+      </mat-toolbar>
+</mat-card-header>
+    <div class="container">
+            <p>ID: {{data.id}} </p>
+        <p>Description: {{data.description}} </p>
+    </div>
+<mat-card-content>
+
+</mat-card-content>
+
+
+
+
+<div>
+    <button mat-raised-button (click)="closeModal()" >Cerrar Modal</button>
+</div>

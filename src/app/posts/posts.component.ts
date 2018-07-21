@@ -1,17 +1,23 @@
 
 
+
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+/**Material */
+import { MatDialog } from '@angular/material';
 
 /**Models */
 import { Post } from '../models/Posts';
 
 /**servicio */
-import { PostsService } from '../serivicios/posts.service';
+import { PostsService } from '../servicios/posts.service';
+import { PostsModalComponent } from './posts-modal.component';
+import { PostModalComponent } from '../post-modal/post-modal.component';
+
+/**Components */
 
 
-
-
+/** */
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -21,7 +27,25 @@ export class PostsComponent implements OnInit {
 
   public posts: Post[];
   public post_only: Post;
-  constructor(private servicePosts: PostsService) { }
+
+  constructor(
+    private servicePosts: PostsService,
+    public dialog: MatDialog
+  ) { }
+
+
+  openModal(datos) {
+    this.dialog.open(
+      PostModalComponent,
+      {data:
+        {
+          id: datos.id,
+          title: datos.title,
+          description: datos.description
+        }
+    }
+    );
+  }
 
   btn_show(id) {
 
@@ -39,22 +63,22 @@ export class PostsComponent implements OnInit {
   btn_delete(post) {
     alert('btn delete');
     this.servicePosts.deletePost(post.id).subscribe(
-      data =>{
-        const pos = this.posts.indexOf(post)
+      data => {
+        const pos = this.posts.indexOf(post);
         console.log(pos);
-        
-        this.posts.splice(pos, 1)
+
+        this.posts.splice(pos, 1);
         console.log(data);
-        
+
       }
     )
   }
 
   createPost(form: NgForm) {
     console.log('data insertions');
-    
+
     console.log(form.value);
-    
+
 
     const newPost: Post = {
       title: form.value.title,
@@ -70,8 +94,8 @@ export class PostsComponent implements OnInit {
     );
 
   }
-    
-  
+
+
 
   ngOnInit() {
 

@@ -1,0 +1,16 @@
+
+        <button  mat-menu-item routerLink="/login" *ngIf="isLoggedOut()">
+          <mat-icon>alarm_off</mat-icon>
+        <span>LogIn</span>
+        </button>
+      
+          <button mat-menu-item routerLink="/signup" *ngIf="isLoggedOut()" >
+            <mat-icon>redeem</mat-icon>
+            <span>SignUp</span>
+          </button>
+    
+      <button  mat-menu-item (click)="logOut()" *ngIf="isLoggedIn()" >
+        <mat-icon>person_add_disabled</mat-icon>
+        <span>Logout</span>
+      </button>
+   
